@@ -8,11 +8,12 @@ class Contact extends React.Component {
     this.state = {
       online: this.props.status
     }
+    this.wrapper = React.createRef();
   }
 
   render() {
     return (
-      <div className="Contact">
+      <div ref={this.wrapper} className="Contact">
         <div>
           <img className="avatar" src={this.props.avatar} alt={this.props.name}/>
         </div>
